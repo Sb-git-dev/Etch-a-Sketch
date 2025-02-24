@@ -1,0 +1,28 @@
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+    background-color:rgba(0, 0, 0, 0.136);
+}
+button{
+    display:flex;
+    align-self:center;
+    text-align:center;
+    padding:10px;
+    height:auto;
+    width:auto;
+    border-radius:5px;
+    background-color:gray;
+    color:white;
+    font-size:12px;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    border:3px solid black;
+    align-self:center;
+}
+/* .div .hover{
+    background-color:red;
+} */
