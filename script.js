@@ -21,7 +21,6 @@ function createGrid(inputSize)
             div.setAttribute("style","width:10px;height:10px;background-color:white;border:1px solid black");
             div.addEventListener("mouseover",()=>{
                 //div.classList.add("hover");
-                let color; 
                 r = getRandom();
                 g = getRandom();
                 b = getRandom();
