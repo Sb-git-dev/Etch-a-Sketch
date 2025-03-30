@@ -12,6 +12,7 @@ function createGrid(inputSize)
         const divContainer = document.createElement("div");
         divContainer.classList.add(containerName);
         divContainer.setAttribute("style","display:flex;flex-direction:row");
+        let r1 = 0, g1 = 0, b1 = 0;
         container.appendChild(divContainer);
         for(let j=0;j<inputSize;j++)
         {
@@ -20,12 +21,17 @@ function createGrid(inputSize)
             div.setAttribute("style","width:10px;height:10px;background-color:white;border:1px solid black");
             div.addEventListener("mouseover",()=>{
                 //div.classList.add("hover");
-                let color
-                div.setAttribute("style","width:10px;height:10px;border:1px solid black;background-color:red");
+                let color; 
+                r = getRandom();
+                g = getRandom();
+                b = getRandom();
+                r1 = r;g1 = g; b1 = b;
+                div.setAttribute("style","width:10px;height:10px;border:1px solid black;background-color:rgb("+ r +","+ g +","+ b +")");
+                console.log(getRandom());
             });
             div.addEventListener("mouseout",()=>{
                 //div.classList.remove("hover");
-                div.setAttribute("style","width:10px;height:10px;border:1px solid black;background-color:red");
+                div.setAttribute("style","width:10px;height:10px;border:1px solid black;background-color:rgb("+ r +","+ g +","+ b +")");
             });
             divContainer.appendChild(div)
         }
@@ -50,5 +56,9 @@ btn.addEventListener("click",()=>{
         createGrid(input);
     }
 });
+function getRandom()
+{
+    return Math.floor(Math.random()*256);
+}
 
 
